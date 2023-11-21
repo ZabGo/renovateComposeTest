@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Run Renovate
-        uses: docker://renovate/renovate:latest
+        uses: docker://renovate/renovate:full
         env:
           RENOVATE_REPOSITORIES: ZabGo/renovateComposeTest
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
