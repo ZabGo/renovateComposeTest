@@ -1,0 +1,27 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  renovate:
+    name: Renovate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Run Renovate
+        uses: docker://renovate/renovate:37.59-slim
+        env:
+          RENOVATE_REPOSITORIES: ZabGo/renovate-test
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          RENOVATE_AUTOMERGE: false # optional, see belowkjhkjhfasdfsafsdfsdf
+
+
+
+
+
+
