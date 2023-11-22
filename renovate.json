@@ -5,12 +5,23 @@
   "platform": "github",
   "separateMultipleMajor": true,
   "enabledManagers": ["gradle"],
-  "packageRules": [
-    {
+    "packageRules": [
+         {
       "groupName": "androidx dependencies",
       "matchPackagePatterns": [
         "androidx.*"
       ]
+    },
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "dependencies for minor & patch changes",
+      "groupSlug": "minor-and-patch-changes"
     }
   ]
 
